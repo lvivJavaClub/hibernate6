@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+  db:
+    image: 'postgres:16.1-alpine3.18'
+    container_name: db
+    environment:
+      - POSTGRES_USER=demo
+      - POSTGRES_PASSWORD=demo
+      - POSTGRES_DB=demo
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "9001:5432"

@@ -1,0 +1,23 @@
+#Generate data for foos & bars tabels
+GET http://localhost:8080/foo/generate
+###
+
+#Get Foo entity
+GET http://localhost:8080/foo/406
+###
+
+#Multitenancy
+GET http://localhost:8080/multi/plankton
+###
+
+#Window functions
+#Worst scenario with linear SQL
+GET http://localhost:8080/pagination/anti-pattern?page=3&size=3
+###
+
+#Window function approach
+GET http://localhost:8080/pagination/window-function?title=
+###
+
+#Generate 100K records (could take some time - up to 10 minutes)
+#GET http://localhost:8080/pagination/generate
